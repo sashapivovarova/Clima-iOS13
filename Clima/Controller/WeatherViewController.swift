@@ -51,7 +51,9 @@ class WeatherViewController: UIViewController, UITextFieldDelegate, WeatherManag
     }
     
     func didUpateWeather(_ weatherManager: WeatherManager,weather: WeatherModel) {
-        print(weather.temperature)
+        DispatchQueue.main.async {
+            self.temperatureLabel.text = weather.temperatureString
+        }
     }
     
     func didFailWithError(error: Error) {

@@ -53,6 +53,7 @@ class WeatherViewController: UIViewController, UITextFieldDelegate, WeatherManag
     func didUpateWeather(_ weatherManager: WeatherManager,weather: WeatherModel) {
         DispatchQueue.main.async {
             self.temperatureLabel.text = weather.temperatureString
+            self.conditionImageView.image = UIImage(systemName: weather.conditionName)
         }
     }
     

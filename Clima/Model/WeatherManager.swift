@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 protocol WeatherManagerDelegate {
     func didUpateWeather(_ weatherManager: WeatherManager,weather: WeatherModel)
